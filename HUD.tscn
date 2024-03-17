@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://k7m1vs3dk687"]
+
+[ext_resource type="Script" path="res://HUD.gd" id="1_08315"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jtvav"]
+bg_color = Color(0, 0.701961, 0.560784, 1)
+
+[sub_resource type="Theme" id="Theme_i7l7g"]
+default_font_size = 27
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_jtvav")
+
+[node name="HUD" type="Node2D"]
+script = ExtResource("1_08315")
+
+[node name="NoiseBar" type="ProgressBar" parent="."]
+offset_right = 278.0
+offset_bottom = 58.0
+theme = SubResource("Theme_i7l7g")
+max_value = 3.0

@@ -1,6 +1,5 @@
 extends Node2D
-signal too_much_noise
+signal moved(delta: float)
 
-
-func _on_timer_too_much_noise():
-	too_much_noise.emit()
+func _on_body_moved(delta):
+	moved.emit(delta)
