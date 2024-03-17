@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://jv43p1ky6mgy"]
+
+[ext_resource type="PackedScene" uid="uid://bxn3cq3wvb80l" path="res://player.tscn" id="1_n6y32"]
+[ext_resource type="PackedScene" uid="uid://cg0errwxft6ht" path="res://roomie.tscn" id="2_kcwl8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_n6y32")]
+
+[node name="Roomie" parent="." instance=ExtResource("2_kcwl8")]
+position = Vector2(389, 152)
+
+[connection signal="too_much_noise" from="Player" to="Roomie" method="_on_player_too_much_noise"]
